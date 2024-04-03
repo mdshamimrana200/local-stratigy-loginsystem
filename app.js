@@ -6,6 +6,7 @@ const passport = require("passport");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const cors = require("cors");
+const path = require("path");
 
 require("./config/passport-local");
 require("ejs");
@@ -32,7 +33,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.get("/", (req, res) => {
-  res.status(200).render("index");
+  res.status(200).sendFile(path.join(__dirname + "/views/index.html"));
 });
 app.use("/account", Router);
 

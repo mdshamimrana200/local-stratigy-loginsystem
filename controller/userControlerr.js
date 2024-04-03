@@ -2,10 +2,11 @@ const passport = require("passport");
 const modelScheema = require("../model/userScheema");
 
 const bcrypt = require("bcrypt");
+const path = require("path");
 const salt = 10;
 
 const register = (req, res) => {
-  res.status(200).render("register");
+  res.status(200).sendFile(path.join(__dirname + "/../views/register.html"));
 };
 
 const login = (req, res) => {
