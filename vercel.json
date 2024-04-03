@@ -1,6 +1,9 @@
 {
   "view": {
-    "defaultEngine": "ejs"
+    "defaultEngine": "ejs",
+    "ext": ".ejs",
+    "name": "index",
+    "root": "/var/task/views"
   },
   "version": 2,
   "builds": [
