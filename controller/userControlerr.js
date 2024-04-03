@@ -63,10 +63,7 @@ const logout = (req, res) => {
 
 //prfile: get
 const profile = (req, res) => {
-  
  res.redirect("/account/login")
-
-  
 };
 //register : post
 const createUser = async (req, res) => {
