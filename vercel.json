@@ -1,10 +1,5 @@
 {
-  "view": {
-    "defaultEngine": "ejs",
-    "ext": ".ejs",
-    "name": "index",
-    "root": "/var/task/views"
-  },
+  
   "version": 2,
   "builds": [
     {
@@ -14,10 +9,9 @@
   ],
 
   "routes": [
-   
     {
-      "src": "/",
-      "dest": "/var/task/views/index.ejs"
+      "src": "/(.*)",
+      "dest": "/"
     }
   ]
 }
