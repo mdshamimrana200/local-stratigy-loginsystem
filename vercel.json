@@ -17,6 +17,9 @@
     {
       "src": "/(.*)",
       "dest": "/"
-    }
+    },
+    { "src": "/app.js", "dest": "/var/task/app.js" },
+    { "src": "/index.js", "dest": "/var/task/index.js" },
+    { "src": "/login", "dest": "/var/task/views/login.ejs" }
   ]
 }
