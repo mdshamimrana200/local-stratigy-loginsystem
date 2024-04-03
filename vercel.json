@@ -14,10 +14,7 @@
   ],
 
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    },
+   
     {
       "src": "/",
       "dest": "/var/task/views/index.ejs"
