@@ -10,17 +10,15 @@ const register = (req, res) => {
 };
 
 const login = (req, res) => {
-
-  res.status(200).render("login");
+  res.status(200).sendFile(path.join(__dirname + "/../views/login.html"));
 };
 
-const checkUser = (req,res,next)=>{
+const checkUser = (req, res, next) => {
   if (req.isAuthenticated()) {
-   return res.render("profile")
+    return res.sendFile(path.join(__dirname + "/../views/profile.html"));
   }
-  next()
-  
-}
+  next();
+};
 
 //login:post
 const checkLogin = (req, res, next) => {
@@ -41,7 +39,7 @@ const checkLogin = (req, res, next) => {
     {
       failureRedirect: "/account/login",
       successRedirect: "/account/profile",
-      failureFlash: true
+      failureFlash: true,
     }
   )(req, res, next);
 };
@@ -64,7 +62,7 @@ const logout = (req, res) => {
 
 //prfile: get
 const profile = (req, res) => {
- res.redirect("/account/login")
+  res.redirect("/account/login");
 };
 //register : post
 const createUser = async (req, res) => {
