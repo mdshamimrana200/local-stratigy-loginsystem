@@ -1,0 +1,10 @@
+<%-include("layout/header")%>
+<h1>Register</h1>
+<form action="/account/register" method="post">
+    <input type="text" class="name" name="name" placeholder="Name"><br>
+    <input type="text" class="text" name="email" placeholder="Email"><br>
+    <input type="password" class="password" name="password" placeholder="password"><br>
+    <input type="password" class="aginPasword" name="agianPassword" placeholder="Retype password"><br>
+    <button type="submit">Register</button>
+</form>
+<%-include("layout/footer")%>
